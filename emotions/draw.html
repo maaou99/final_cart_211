@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <p class="loader-text">LOADING<span class="loader-point1">.</span><span class="loader-point2">.</span><span class="loader-point3" >.</span></p>
+    
+    </div>
+    <a href="../index.html"><input type="reset" style = 'position:absolute; top:8%; left:80%;'id="navBar-buttom-home" class=" navbar button-hm" value="HOME" onclick=' '></a>
+    
+        <div class="text-draw">
+            <p>Draw your emotion.</p>
+        </div>
+    
+ <!--source code from: https://www.youtube.com/watch?v=wCwKkT1P7vY&t=1071s-->
+        <canvas class="buttom-hm" id="canvas"></canvas>
+       
+            <div class="tools">
+            <div onclick = "changeColor(this)" class="color-field" style="background: red;"></div>
+            <div onclick = "changeColor(this)" class="color-field" style="background: rgb(238, 255, 0);"></div>
+            <div onclick = "changeColor(this)" class="color-field" style="background: rgb(195, 0, 255);"></div>
+            <div onclick = "changeColor(this)" class="color-field" style="background: rgb(0, 255, 42);"></div>
+
+            <input type="color" class= "color-picker"  oninput="stroke_color = this.value" placeholder="Colors">
+            <input type="range" min="1" max="100" class="pen-range" oninput="stroke_width = this.value">
+
+        </div>
+<br><br>
+        <div class="draw-buttons">
+            <button onclick = "restore()" type="button" class=" button-draw">Undo</button>
+            <button onclick="Clear()" type="button" class=" button-draw">Clear</button>
+        </div>
+      
+  
+
+
+    
+
+
+    <script src="draw.js"></script>
+</body>
+</html>
